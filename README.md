@@ -62,8 +62,8 @@ mysql -u valet -p
 Enter Password: 'root'
 
 drop user 'root'@'localhost';  
-CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';  
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';      
+<p>GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';</p>  
 
 ### Laravel
 composer global require laravel/installer  
