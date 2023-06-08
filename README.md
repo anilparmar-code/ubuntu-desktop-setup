@@ -1,87 +1,179 @@
 # ubuntu-desktop-setup
 
-**sudo apt update**  
-**sudo apt upgrade**
+````bash
+sudo apt update
+
+sudo apt upgrade
+````
 
 ### Google Chrome
-<a href="https://www.google.com/chrome/">Download Chrome Deb Package</a><br>
-dpkg -i chrome.deb
+
+[Download Chrome Deb Package](https://www.google.com/chrome)
+
+```bash
+sudo dpkg -i chrome.deb
+```
 
 ### Tools
+
+````bash
 sudo apt install curl git vim make neofetch xclip xsel
+````
 
 ### Node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+
+````bash
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  
+# Install latest node version
 nvm install node
+````
 
-npm i -g nodemon
 
-### ZSH
-sudo apt install zsh -y  
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  
-chsh -s $(which zsh)  
+### Zsh
+
+````bash
+# Install zsh
+sudo apt install zsh -y
+
+# Install OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Make default 
+chsh -s $(which zsh)
+
+# Restart computer
 sudo reboot
+````
 
-### ZSH Plugins
-<a href="https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md">ZSH Autosuggestions</a>
+### List of Zsh Plugins
+
+[ZSH Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
 ### FlatPak
+````bash
+# Install flatpak
 sudo apt install flatpak  
-sudo apt install gnome-software-plugin-flatpak  
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo  
+
+# Gnome plugin flatpak
+sudo apt install gnome-software-plugin-flatpak
+
+# Add flatpak repo  
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Restart computer  
 sudo reboot
+````
 
 ### FlatPak Software
-flatpak install flathub com.getpostman.Postman  
-flatpak install flathub org.videolan.VLC  
-flatpak install flathub org.gimp.GIMP  
+
+````bash
+# Postman
+flatpak install flathub com.getpostman.Postman
+
+# VLC  
+flatpak install flathub org.videolan.VLC
+
+# GIMP  
+flatpak install flathub org.gimp.GIMP
+
+# Bottles for run windows program  
 flatpak install flathub com.usebottles.bottles
+````
 
 ### Composer
+
+````bash
+# install required packages
 sudo apt install php-cli unzip
 
+# navigate to home directory
 cd ~  
-curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php  
+
+# Download
+curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+  
+# Install
 sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+````
 
 ### Valet Linux+
-sudo apt install network-manager libnss3-tools jq xsel libnss3-tools  
+````bash
+# install required packages
+sudo apt install network-manager libnss3-tools jq xsel libnss3-tools 
+
+# install php plugins
 sudo apt install php-cli php-curl php-mbstring php-xml php-zip
 
+# Valet Linux+
 composer global require genesisweb/valet-linux-plus
 
-Add <code>export PATH="$PATH:$HOME/.config/composer/vendor/bin"</code> to .zshrc
+# add to .zshrc
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
+# Install
 valet install
 
-**if error jq and certutil install and valet install again**   
+## If get error of jq and certutil, install and run valet install again
 sudo apt install jq  
 sudo apt-get install libnss3-tools
+````
 
-mysql -u valet -p  
-Enter Password: 'root'
+### Mysql
 
+````bash
+# Enter Password: 'root'
+mysql -u valet -p 
+
+# By default valet linux+ create valet user with password root
+# If you want to create or change mysql user valet to root then follow next steps
+
+# *Backup database if you have important database in root user;
+# Delete mysql root user
 drop user 'root'@'localhost';  
-CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';      
-<p>GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';</p>  
+
+# Create fresh mysql root user;
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';
+
+# Grant all privileges  
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';   
+````
 
 ### Laravel
-composer global require laravel/installer  
+
+````bash
+# Laravel Installer
+composer global require laravel/installer
+
+# Create test project
 laravel new blog
+````
 
-### Gnome Extentions
-sudo apt install chrome-gnome-shell  
+### GNOME Extensions
+````bash
+# chrome extension
+sudo apt install chrome-gnome-shell
+
+# Gui GNOME extension manager
 sudo apt install gnome-shell-extension-manager
+````
 
-### Gnome extentions
-1. <a href="https://extensions.gnome.org/extension/4985/php-laravel-valet/">PHP Laravel Valet by rahulhaque</a>
-2. <a href="https://extensions.gnome.org/extension/3724/net-speed-simplified/">Net speed Simplified by prateeksu</a>
-3. <a href="https://extensions.gnome.org/extension/4839/clipboard-history/">Clipboard History by SUPERCILEX</a>
-4. <a href="https://extensions.gnome.org/extension/4033/x11-gestures/">X11 Gestures by JoseExposito</a>
-    - sudo add-apt-repository ppa:touchegg/stable
-    - sudo apt update
-    - sudo apt install touchegg
-    - flatpak install flathub com.github.joseexposito.touche
+### Useful GNOME extensions
+1. [PHP Laravel Valet by rahulhaque](https://extensions.gnome.org/extension/4985/php-laravel-valet/)
+2. [Net speed Simplified by prateeksu](https://extensions.gnome.org/extension/3724/net-speed-simplified/)
+3. [Clipboard History by SUPERCILEX](https://extensions.gnome.org/extension/4839/clipboard-history/)
+4. [X11 Gestures by JoseExposito](https://extensions.gnome.org/extension/4033/x11-gestures/)
+````bash
+# X11 Gestures
+sudo add-apt-repository ppa:touchegg/stable
+
+sudo apt update
+
+sudo apt install touchegg
+
+flatpak install flathub com.github.joseexposito.touche
+````
 
 ### Jetbrains Software
-<a href="https://www.jetbrains.com/toolbox-app/">Toolbox App</a>
+[Toolbox App](https://www.jetbrains.com/toolbox-app/)
