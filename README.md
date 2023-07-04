@@ -120,6 +120,23 @@ sudo apt install jq
 sudo apt-get install libnss3-tools
 ````
 
+### Php Memory Limits
+````bash
+# navigate to php conf directory
+cd /etc/php/8.1/fpm/conf.d
+
+# create new file
+sudo nano php-memory-limits.ini
+
+# configuration
+memory_limit=1024M
+upload_max_filesize=1024M
+post_max_size=1024M
+
+# restart valet
+valet restart
+````
+
 ### Mysql
 
 ````bash
