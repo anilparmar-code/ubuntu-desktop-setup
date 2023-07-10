@@ -194,3 +194,19 @@ flatpak install flathub com.github.joseexposito.touche
 
 ### Jetbrains Software
 [Toolbox App](https://www.jetbrains.com/toolbox-app/)
+
+### AppImage Launcher
+````bash
+# Add the PPA via command
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+
+sudo apt update
+sudo apt install appimagelauncher
+````
+
+### Laravel Aliases
+````bash
+# Add to .zshrc
+alias pamf="php artisan migrate:fresh"
+alias pamfs="php artisan migrate:fresh --seed"
+````
