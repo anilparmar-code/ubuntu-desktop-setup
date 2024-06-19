@@ -82,6 +82,22 @@ flatpak install flathub org.gimp.GIMP
 flatpak install flathub com.usebottles.bottles
 ````
 
+### Flatpak Downgrading application (ex: bottles)
+
+````bash
+# Install latest version of application
+flatpak install flathub com.usebottles.bottles
+
+# Check commit history of application version
+flatpak remote-info --log flathub com.usebottles.bottles
+
+# Downgrade to specific version with specified commit
+sudo flatpak update --commit=ca5bc99c5bb49811254fdcad618b80a7e588993d88b0d93e4ab237153afc8d40 com.usebottles.bottles
+
+# Prevent the application from being included in updates
+flatpak mask com.usebottles.bottles
+````
+
 ### Composer
 
 ````bash
