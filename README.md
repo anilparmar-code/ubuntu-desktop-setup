@@ -208,6 +208,19 @@ sudo apt install touchegg
 flatpak install flathub com.github.joseexposito.touche
 ````
 
+### FUSE for AppImage
+````bash
+# Ubuntu (>= 24.04)
+sudo add-apt-repository universe
+sudo apt install libfuse2t64
+
+# Ubuntu (>= 22.04)
+sudo add-apt-repository universe
+sudo apt install libfuse2
+
+````
+
+
 ### Jetbrains Software
 [Toolbox App](https://www.jetbrains.com/toolbox-app/)
 
