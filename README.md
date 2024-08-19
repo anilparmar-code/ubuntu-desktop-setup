@@ -6,6 +6,16 @@ sudo apt update
 sudo apt upgrade
 ````
 
+### Disable Wayland (screen resolution issue)
+
+````bash
+# edit custom.conf 
+sudo nano /etc/gdm3/custom.conf
+
+# add or uncomment WaylandEnable as false
+WaylandEnable=false
+````
+
 ### Google Chrome
 
 [Download Chrome Deb Package](https://www.google.com/chrome)
