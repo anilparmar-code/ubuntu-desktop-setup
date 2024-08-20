@@ -34,7 +34,7 @@ sudo apt install curl git vim make neofetch xclip xsel
 
 ````bash
 # Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
   
 # Install latest node version
 nvm install node
