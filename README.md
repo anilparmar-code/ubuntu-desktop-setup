@@ -1,4 +1,4 @@
-# ubuntu-desktop-setup
+# Ubuntu Desktop Setup
 
 ````bash
 sudo apt update
