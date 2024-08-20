@@ -243,6 +243,9 @@ sudo apt update
 sudo apt install appimagelauncher
 ````
 
+### Table Plus
+[Official Installation Guide](https://tableplus.com/download)
+
 ### Laravel Aliases
 ````bash
 # Add to .zshrc
