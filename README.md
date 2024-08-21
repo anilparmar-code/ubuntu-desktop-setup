@@ -246,6 +246,9 @@ sudo apt install appimagelauncher
 ### Table Plus
 [Official Installation Guide](https://tableplus.com/download)
 
+### Tinkerwell - The PHP Scratchpad
+[Buy Tinkerwell](https://tinkerwell.app/ref/MBv6PgW35y)
+
 ### Laravel Aliases
 ````bash
 # Add to .zshrc
