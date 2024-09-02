@@ -189,6 +189,8 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';
 # Laravel Installer
 composer global require laravel/installer
 
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
 # Create test project
 laravel new blog
 ````
