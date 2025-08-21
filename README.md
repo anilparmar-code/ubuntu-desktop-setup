@@ -16,6 +16,15 @@ sudo nano /etc/gdm3/custom.conf
 WaylandEnable=false
 ````
 
+### GDebi (Quickly Installing DEB Packages)
+
+````bash
+# Install GDebi
+sudo apt install Gdebi
+
+# Open .deb file with GDebi Package Installer
+````
+
 ### Google Chrome
 
 [Download Chrome Deb Package](https://www.google.com/chrome)
