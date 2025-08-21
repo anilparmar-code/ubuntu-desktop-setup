@@ -241,6 +241,11 @@ sudo apt install libfuse2
 
 ````
 
+### ULauncher
+````bash
+sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher-dev -y && sudo apt update && sudo apt install ulauncher
+````
+
 
 ### Jetbrains Software
 [Toolbox App](https://www.jetbrains.com/toolbox-app/)
