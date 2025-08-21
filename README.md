@@ -241,7 +241,7 @@ sudo apt install libfuse2
 
 ````
 
-### ULauncher
+### [ULauncher](https://ulauncher.io) 
 ````bash
 sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher-dev -y && sudo apt update && sudo apt install ulauncher
 ````
